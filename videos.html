@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="This sentence will appear under the link in search engine results.">
+	<meta name="keywords" content="list,of,words,separated,by,commas,that,describe,your,site">
+	<meta name="author" content="Your name goes here">
+
+	<!-- viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- shiv which should be a shim -->
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- tab title -->
+	<title>MLB Videos</title>
+
+	<!-- favicon link -->
+	<link rel="shortcut icon" href="images/mlblogo.png">
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/slicknav.css">
+	<link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
+
+    <!-- slicknav -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>   <!-- Link to jQuery Content Delivery Network - Necessary for SlickNav to work correctly -->
+    <script src="js/jquery.slicknav.min.js"></script>                     <!-- Link to the slicknav file inside the js folder - Necessary for SlickNav to work correctly -->
+
+	<!-- slicknav javascript - this javascript code will use the UL inside the nav_menu tag to build the same menu in slickNav format -->
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('.nav_menu').slicknav({prependTo:"#mobilemenu"});
+    	});
+    </script>
+
+</head>
+
+<body>
+
+	<header class="clearfix">
+		<a href="index.html"><img src="images/mlblogo.png"></a>
+		<h1><a href="index.html">MLB</a></h1>
+	</header>
+
+   <nav id="mobilemenu"></nav>
+	<nav class="nav_menu">
+    	<ul>
+			<li><a href="index.html">Home Page</a></li>
+			<li><a href="videos.html" class="current">Highlights</a></li>
+			<li><a href="gallery.html" class="current">Best Images (Gallery)</a></li>
+			<li><a href="history.html">The History of Baseball</a></li>
+    	</ul>
+	</nav>
+
+	<nav class="bookmarks">
+		<ul>
+			<li><a href="#vid1">Video 1</a></li>
+			<li><a href="#vid2">Video 2</a></li>
+			<li><a href="#vid3">Video 3</a></li>
+			<li><a href="#vid4">Video 4</a></li>
+			<li><a href="videos.html">Home</a></li>
+		</ul>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Return To Top</button>
+	</nav>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+	<section>
+		<article id="vid1">
+			<h4>Video 1: Last Play From Every World Series - 1980 to Present</h4>
+			<div class="videowrapper">
+				<iframe width="956" height="538" src="https://www.youtube.com/embed/PkDMn2ddH9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="caption">
+				<p>
+					The last play fo every world series is a great moment in baseball. It shows grown men jumping up and down like little kids after all of their hard work has paid off.<br>
+				</p>
+			</div>
+		</article>
+
+		<article id="vid2">
+			<h4>Video 2: A Breif History of Baseball</h4>
+			<div class="videowrapper">
+				<iframe width="956" height="538" src="https://www.youtube.com/embed/uHVS3GGEaW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="caption">
+				<p>
+					A quick video of the histroy of baseball including some information on Jackie Robinson.
+				</p>
+			</div>
+		</article>
+
+		<article id="vid3">
+			<h4>Video 3: The Top 100 MLB Plays of 2020</h4>
+			<div class="videowrapper">
+				<iframe width="857" height="482" src="https://www.youtube.com/embed/Wog4Z_wkppw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="caption">
+				<p>
+					This video shows the top 100 rated plays of 2020!
+				</p>
+			</div>
+		</article>
+
+		<article id="vid4">
+			<h4>Video 4: The Dead Ball Era</h4>
+			<div class="videowrapper">
+				<iframe width="717" height="538" src="https://www.youtube.com/embed/fZord0btVkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="caption">
+				<p>
+					This video shows clips of what the MLB was like in the Dead Ball Era.
+				</p>
+			</div>
+		</article>
+	
+
+	
+	
+	</section>
+
+
+
+	<script>
+		window.onload = function() {
+			var d = new Date();
+			document.getElementById("copyright").innerHTML = d.getFullYear();
+		}
+	</script>
+
+	<footer>
+		<p>&copy; <span id="copyright"></span> Griffin Embree</p>
+	</footer>
+
+</body>
+</html>
